@@ -8,7 +8,7 @@ import { captureLambdaHandler } from "@aws-lambda-powertools/tracer";
 import { logger, metrics, tracer} from "../powertools/utilities";
 import { injectLambdaContext } from "@aws-lambda-powertools/logger";
 import { logMetrics, MetricUnits } from "@aws-lambda-powertools/metrics";
-
+//nilly
 const store: ProductStore = new DynamoDbStore();
 const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
 

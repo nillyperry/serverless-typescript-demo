@@ -72,6 +72,13 @@ const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPro
   }
 
   try {
+    const random = seededRandom(1);
+    
+    let x = 0;
+
+    for (let i = 0; i < 20000000; i++) {
+        x += random();
+    }
     await store.putProduct(product);
 
     metrics.addMetric('productCreated', MetricUnits.Count, 1);
